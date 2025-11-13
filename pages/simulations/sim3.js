@@ -163,7 +163,7 @@ export default function Sim3() {
             {/* 가이드 토글 */}
             <div className="text-center">
               <button
-                onClick={() => setShowGuide(!showGuide)}
+                onClick={() => typeof window !== "undefined" && window.history.back()}
                 className="text-sm text-indigo-600 underline hover:text-indigo-800 transition"
               >
                 {showGuide ? '가이드 숨기기' : '가이드 보기'}
@@ -195,7 +195,7 @@ export default function Sim3() {
         {/* 돌아가기 버튼 */}
         <div className="mt-12 text-center">
           <button
-            onClick={() => typeof window!=="undefined"window.history.back()window.history.back()window.history.back()}
+            onClick={() => typeof window !== "undefined" && window.history.back()}
             className="bg-gray-300 text-gray-700 px-6 py-3 rounded-xl hover:bg-gray-400 transition"
           >
             ← 돌아가기

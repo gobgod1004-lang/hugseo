@@ -130,7 +130,7 @@ export default function Sim4() {
             {Object.entries(modeInfo).map(([key, info]) => (
               <button
                 key={key}
-                onClick={() => setMode(key)}
+                onClick={() => typeof window !== "undefined" && window.history.back()}
                 className={`p-4 rounded-xl border-4 transition-all ${
                   mode === key
                     ? `${info.bgColor} ${info.borderColor} scale-105`
@@ -340,7 +340,7 @@ export default function Sim4() {
                 초기화
               </button>
               <button
-                onClick={() => setShowGuide(!showGuide)}
+                onClick={() => typeof window !== "undefined" && window.history.back()}
                 className="flex-1 py-3 bg-indigo-500 text-white rounded-xl font-bold hover:bg-indigo-600 transition-all"
               >
                 📖 {showGuide ? '설명 숨기기' : '설명 보기'}

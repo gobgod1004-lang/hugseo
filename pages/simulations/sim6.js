@@ -32,7 +32,7 @@ export default function Sim6() {
             {Object.entries(breedData).map(([key, breed]) => (
               <button
                 key={key}
-                onClick={() => setSelectedBreed(key)}
+                onClick={() => typeof window !== "undefined" && window.history.back()}
                 className={`p-3 sm:p-4 rounded-xl border-4 transition-all ${
                   selectedBreed === key
                     ? `${breed.color} ${breed.borderColor} scale-105 shadow-lg`
@@ -60,7 +60,7 @@ export default function Sim6() {
             {/* 가이드 토글 */}
             <div className="text-center">
               <button
-                onClick={() => setShowGuide(!showGuide)}
+                onClick={() => typeof window !== "undefined" && window.history.back()}
                 className="px-6 py-3 bg-indigo-500 text-white rounded-full font-bold hover:bg-indigo-600 transition-all shadow-lg"
               >
                 📖 {showGuide ? '설명 숨기기' : '설명 보기'}
@@ -169,7 +169,7 @@ export default function Sim6() {
         {/* 돌아가기 버튼 */}
         <div className="mt-8 text-center">
           <button 
-            onClick={() => typeof window!=="undefined"window.history.back()window.history.back()window.history.back()}
+            onClick={() => typeof window !== "undefined" && window.history.back()}
             className="px-8 py-3 bg-white text-gray-700 rounded-full shadow-lg hover:shadow-xl transition-all font-semibold"
           >
             ← 돌아가기
