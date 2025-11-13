@@ -169,7 +169,7 @@ export default function Sim6() {
         {/* 돌아가기 버튼 */}
         <div className="mt-8 text-center">
           <button 
-            onClick={() => window.history.back()}
+            onClick={() => typeof window!=="undefined"window.history.back()window.history.back()window.history.back()}
             className="px-8 py-3 bg-white text-gray-700 rounded-full shadow-lg hover:shadow-xl transition-all font-semibold"
           >
             ← 돌아가기

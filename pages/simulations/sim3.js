@@ -195,7 +195,7 @@ export default function Sim3() {
         {/* 돌아가기 버튼 */}
         <div className="mt-12 text-center">
           <button
-            onClick={() => window.history.back()}
+            onClick={() => typeof window!=="undefined"window.history.back()window.history.back()window.history.back()}
             className="bg-gray-300 text-gray-700 px-6 py-3 rounded-xl hover:bg-gray-400 transition"
           >
             ← 돌아가기
